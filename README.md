@@ -28,12 +28,6 @@ In this tutorial I show you how you can create a PWA and how you can capture aud
   <img src="./assets/demo.gif" />
 </p>
 
-## ⛅️ Develop in the Cloud
-
-You can run this project in Gitpod, a one-click online IDE for GitHub:
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/JoseJPR/tutorial-pwa-capture-audio)
-
 ## 📐 How to work with this project
 
 You have to do the following steps to be able to work with this project.
