@@ -2,14 +2,17 @@
 let globalStream = null;
 let mediaRecorder = null;
 let recordedChunks = [];
-const config = {mimeType: 'audio/webm'};
+const config = { mimeType: 'audio/webm' };
 
 // Init element dom references.
 const buttonMicrophone = document.getElementById('buttonMicrophone');
 const buttonDownload = document.getElementById('buttonDownload');
 
-buttonMicrophone.addEventListener('mousedown', () => {
-
+/**
+ * @name handlerStart
+ * @description Function in order to start media instance.
+ */
+const handlerStart = () => {
   // Add class animation loop.
   buttonMicrophone.classList.add('animation-loop');
 
@@ -42,7 +45,6 @@ buttonMicrophone.addEventListener('mousedown', () => {
     mediaRecorder = null;
   });
 
-
   // Event start where you can execute custom actions.
   mediaRecorder.addEventListener('start', function() {
     console.log('addEventListener start');
@@ -55,19 +57,27 @@ buttonMicrophone.addEventListener('mousedown', () => {
 
   // Start recorder event of media recorder instance.
   mediaRecorder.start();
-});
+}
 
-buttonMicrophone.addEventListener('mouseup', () => {
+/**
+ * @name handlerEnd
+ * @description Function in order to stop media instance.
+ */
+const handlerEnd = () => {
   // Remove class animation loop.
   buttonMicrophone.classList.remove('animation-loop');
 
   // Stop recorder event of media recorder instance.
   mediaRecorder.stop();
-});
+}
 
 // Active permisions of navigator for record audio.
 navigator.mediaDevices
   .getUserMedia({ audio: true, video: false })
-  .then((stream) => { 
+  .then((stream) => {
     globalStream = stream;
   });
+
+// Define all handlers for start and stop record desktop.
+buttonMicrophone.addEventListener('mousedown', handlerStart);
+buttonMicrophone.addEventListener('mouseup', handlerEnd);
