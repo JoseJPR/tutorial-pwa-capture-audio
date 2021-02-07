@@ -1,5 +1,5 @@
 {
-  "name": "tutorial-pwa-audio-capturing",
+  "name": "tutorial-pwa-capture-audio",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JoseJPR/tutorial-pwa-audio-capturing.git"
+    "url": "git+https://github.com/JoseJPR/tutorial-pwa-capture-audio.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JoseJPR/tutorial-pwa-audio-capturing/issues"
+    "url": "https://github.com/JoseJPR/tutorial-pwa-capture-audio/issues"
   },
-  "homepage": "https://github.com/JoseJPR/tutorial-pwa-audio-capturing#readme",
+  "homepage": "https://github.com/JoseJPR/tutorial-pwa-capture-audio#readme",
   "dependencies": {
     "fastify": "^2.14.0",
     "fastify-static": "^2.7.0"
